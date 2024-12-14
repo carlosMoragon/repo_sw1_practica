@@ -1,0 +1,48 @@
+    <%- include("metainfo", {}) %>
+    <!-- Incluir etiquetas link específicas de esta view  -->
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <script src="/javascripts/login.js" defer></script>
+    <%- include("header", {}) %>
+
+    
+
+    <div>
+        
+    </div>    
+    <div id="register" class="main_login">
+        <label for="register_form" form="register_form">REGISTER</label> 
+        <form id="register_form" action="/login/check_register" method="post">
+            <div class="inputDiv">
+                <label for="email_register">Email</label>
+                <input id="email_register" type="email" placeholder="email" name="email_register">
+            </div>
+            <div class="inputDiv">
+                <label for="username_register">Username</label>
+                <input id="username_register" type="text" placeholder="username" name="username_register" required>
+            </div>
+            <div class="inputDiv">
+                <label for="password_register">Password</label>
+                <input id="password_register" type="password" placeholder="password" name="password_register" required>
+            </div>
+            <button class="send">send</button>
+        </form>
+    </div>
+    
+    <div id="login" class="main_login">
+        <label for="login_form" form="login_form">LOGIN</label> 
+        <form id="login_form" action="/login/check_login" method="post">
+            <div class="inputDiv">
+                <label for="username_email_login">Username or Email</label>
+                <input id="username_email_login" type="text" placeholder="username or email" name="username_email_login" required>
+            </div>
+            <div class="inputDiv">
+                <label for="password_login">Password</label>
+                <input id="password_login" type="password" placeholder="password" name="password_login" required>
+            </div>
+            
+            <button class="send">send</button>
+        </form>
+    </div>
+    
+  
+    <%- include("footer", {}) %>

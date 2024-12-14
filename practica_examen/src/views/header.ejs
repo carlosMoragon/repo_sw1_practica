@@ -1,0 +1,19 @@
+<!-- Antes va toda la meta información css, js, etc. -->
+</head>
+<body>
+    <header>
+        <div id="div_title">
+            <h1><%=title%></h1>
+        </div>
+        
+        <div id="buttons_header">
+            
+            <% if(islog){ %>
+                <button onclick="window.location.href='/chat'" class="button_header">CHAT</button>
+            <% } else {%>
+                <button onclick="window.location.href='/'" class="button_header">HOME</button>
+                <button onclick="window.location.href='/login'" class="button_header">LOGIN</button>
+            <% } %>
+        </div>
+        
+    </header>

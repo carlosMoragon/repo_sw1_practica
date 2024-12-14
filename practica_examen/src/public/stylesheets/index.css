@@ -1,0 +1,36 @@
+#global {
+    align-items: center;
+    justify-items: center;
+}
+
+.main {
+    display: flex;
+    background-color: #c0dd98;
+    width: 80%;
+    border-radius: 15px;
+}
+
+#left_main {
+    width: 50%;
+    justify-items: center;
+    align-content: center;
+}
+
+#right_main{
+    display: block;
+    width: 50%;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#right_main img {
+    margin: 20px;
+    border-radius: 15px;
+}
+
+#buttons_main {
+    margin-bottom: 30px;
+    
+}

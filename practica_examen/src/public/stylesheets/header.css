@@ -1,0 +1,72 @@
+* {
+    font-family: Arial, sans-serif; /* Fuente moderna */
+}
+
+body, html {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina los rellenos predeterminados */
+    width: 100%; /* Ocupa el 100% del ancho */
+    height: 100%; /* Ocupa el 100% del alto */
+    box-sizing: border-box; /* Asegura que el tamaño incluya bordes y rellenos */
+}
+
+header {
+    width: 90%;
+    max-width: 1200px; /* Evita que el header sea más grande que 1200px */
+    margin: 0 auto; /* Centra el header horizontalmente */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex; /* Flexbox para alinear elementos dentro del header */
+    background-color: #4CAF50; /* Verde atractivo */
+    color: white; /* Texto en blanco para contraste */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centrar el texto dentro del header */
+    font-family: Arial, sans-serif; /* Fuente moderna */
+    box-sizing: border-box; /* Corrige problemas de tamaño */
+}
+
+
+#div_title{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttons_header {
+    display: flex; /* Flexbox en el contenedor de botones */
+    /*justify-content: flex-end; /* Alinea los botones a la derecha */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaciado entre botones */
+    flex-grow: 1; /* Hace que el contenedor ocupe el espacio restante */
+    margin-right: 10px;
+}
+
+.button_header {
+    height: 80%;
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+      0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+      0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+    transition: 0.15s ease;
+    cursor: pointer;
+}
+
+.button_header:active {
+    translate: 0 0.225em;
+    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+      0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+      0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
+}
+  

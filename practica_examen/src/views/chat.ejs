@@ -1,0 +1,32 @@
+<%- include("metainfo", {}) %>
+<!-- Incluir etiquetas link específicas de esta view  -->
+ <link rel="stylesheet" href="/stylesheets/chat.css">
+ <script src="/javascripts/chat.js" defer></script>
+ <script src="/socket.io/socket.io.js"></script>
+<%- include("header", {}) %>
+    <div id="main">
+        <div id="listGroups">
+            <label for="groups">Group list:</label>
+            <div id="groups">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+        <div id="chatDiv">
+            <div id="chat">
+                <div id="titleChat">
+                    <label>CHAT</label>
+                </div>
+                <ul id="messagesContainer">
+                </ul>
+                <form id="form_message">
+                    <input id="messageInput" type="text" placeholder="introduce your message">
+                    <button onclick="sendMessage('<%= username %>')">send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+  
+<%- include("footer", {}) %>

@@ -1,0 +1,35 @@
+Inicializar el proyecto:
+npm init //No se si es necesario
+npm install express //No se si es necesario
+npm install -g express-generator
+npx express-generator -v ejs express_test
+cd express_test
+npm install
+npm audit fix <--force>
+npm start
+
+Modulos que te pueden servir:
+require('http');
+require('path');
+require('fs');
+require('util');
+
+Variables de entorno:
+npm install dotenv (<- Archivo .env)
+require('dotenv').config();
+
+powershell> $env:PORT=3035; npm start
+CMD> set PORT=3035 && npm start
+
+Cookies: 
+npm install express-session
+app.js:
+    var session = require('express-session');
+    
+    // Configuración de sesión
+    app.use(session({
+    secret: 'mi_clave_secreta',   // Usa una clave secreta para firmar las sesiones
+    resave: false,                // No volver a guardar sesiones si no hay cambios
+    saveUninitialized: true,      // Guarda la sesión incluso si no está inicializada
+    cookie: { secure: false }     // Si usas HTTPS, cambia 'false' a 'true' (esto se usa para enviar cookies seguras)
+    }));

@@ -1,0 +1,25 @@
+<%- include("metainfo", {}) %>
+<!-- Incluir etiquetas link específicas de esta view  -->
+ <link rel="stylesheet" href="/stylesheets/index.css">
+<%- include("header", {}) %>
+  <div id="global">
+    <div class="main">
+      <div id="left_main">
+        <h1><%=title%></h1>
+        <label>Una práctica para el examen!!</label>
+      </div>
+      <div id="right_main">
+        <div>
+          <img src="/images/logo.jpg">
+        </div>
+        <div id="buttons_main">
+          <button onclick="window.location.href='/login'" class="button_header">login</button>
+          <button onclick="window.location.href='/login#register'" class="button_header">register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+<%- include("footer", {}) %>
