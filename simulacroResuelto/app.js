@@ -16,7 +16,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.locals.title = "Embutidos León";
-app.locals.cookie = false;
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -26,7 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: "Una frase muy secreta",
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  consentCookie: false
 }));
 app.use((req,res,next) => {
   const message = req.session.message;
@@ -37,6 +37,9 @@ app.use((req,res,next) => {
   res.locals.error = "";
   if(message) res.locals.message = `<p>${message}</p>`;
   if(error) res.locals.error = `<p>${error}</p>`;
+
+  //ESTO ES LO QUE SE HA CAMBIADO EN LA ÚLTIMA VERSIÓN
+  res.locals.cookie = req.session.consentCookie || false;
   next();
 });
 
@@ -62,7 +65,6 @@ function restricted(req, res, next){
 
 app.post('/savecookies', (req, res, next) => {
   req.session.consentCookie = true;
-  app.locals.cookie = true;
 
   if(req.session.user){
     database.user.savecookies(req.session.user.username);
